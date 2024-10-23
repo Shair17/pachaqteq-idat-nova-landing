@@ -14,19 +14,25 @@ import { RetroGrid } from "./RetroGrid";
 
   <div class="relative px-6 lg:px-8 z-10">
     <div class="mx-auto max-w-2xl lg:max-w-6xl">
-      <!-- class="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32" -->
       <div class="py-16 sm:py-24 md:py-32 flex justify-between items-center">
         <div>
-          <Image
-            src={InspiraTECLogoImage}
-            class="w-auto h-1/2 -mx-5 md:-mx-8 lg:-mx-16 object-cover"
-            alt="Hackathon PachaqTech 2024"
-          />
+          <div class="aspect-auto">
+            <!-- <Image
+              src={InspiraTECLogoImage}
+              class="w-auto h-1/2 -mx-5 md:-mx-8 lg:-mx-16 object-cover"
+              alt="Hackathon PachaqTech 2024"
+            /> -->
+            <Image
+              src={InspiraTECLogoImage}
+              class="w-full h-full -mx-5 md:-mx-8 lg:-mx-16 object-cover"
+              alt="Hackathon PachaqTech 2024"
+            />
+          </div>
 
           <p
-            class="mt-8 max-w-lg text-xl/7 font-medium text-neutral-100 sm:text-2xl/8"
+            class="mt-8 max-w-lg text-lg/7 font-medium text-neutral-100 sm:text-2xl/8"
           >
-            Desde el 22 hasta el 23 de Noviembre_
+            Desde el 22 hasta el 23 de Noviembre
           </p><div class="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <a
               href="https://forms.gle/DPtv8KwoNXraSnKq6"
