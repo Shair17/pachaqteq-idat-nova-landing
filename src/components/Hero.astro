@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import HeroImage from "../../public/hero-image.png";
+import InspiraTECLogoImage from "../../public/inspiratec-logo.png";
 import { RetroGrid } from "./RetroGrid";
 ---
 
@@ -14,12 +17,9 @@ import { RetroGrid } from "./RetroGrid";
       <!-- class="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32" -->
       <div class="py-16 sm:py-24 md:py-32 flex justify-between items-center">
         <div>
-          <h1 class="sr-only">Hackathon PachaqTech 2024.</h1>
-
-          <img
-            itemprop="image"
-            class="w-auto h-1/2 -mx-5 md:-mx-8 lg:-mx-16"
-            src="/inspiratec-logo.png"
+          <Image
+            src={InspiraTECLogoImage}
+            class="w-auto h-1/2 -mx-5 md:-mx-8 lg:-mx-16 object-cover"
             alt="Hackathon PachaqTech 2024"
           />
 
@@ -48,10 +48,10 @@ import { RetroGrid } from "./RetroGrid";
           </div>
         </div>
 
-        <img
-          src="/hero-image.png"
+        <Image
+          src={HeroImage}
+          class="w-1/2 lg:h-1/2 object-cover hidden md:flex"
           alt="Hackathon PachaqTech 2024"
-          class="w-1/2 lg:h-1/2 hidden md:flex"
         />
       </div>
     </div>

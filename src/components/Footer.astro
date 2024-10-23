@@ -1,5 +1,6 @@
 ---
-
+import { Image } from "astro:assets";
+import InspiraTECLogoImage from "../../public/inspiratec-logo.png";
 ---
 
 <footer class="text-white">
@@ -10,11 +11,10 @@
       href="/"
       class="flex items-center md:justify-start justify-center text-neutral-900"
     >
-      <img
-        itemprop="image"
-        class="w-auto h-20"
-        src="/inspiratec-logo.png"
-        alt="logo"
+      <Image
+        src={InspiraTECLogoImage}
+        class="w-auto h-20 object-cover"
+        alt="Hackathon PachaqTech 2024"
       />
     </a>
 

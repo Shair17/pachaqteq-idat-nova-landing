@@ -1,5 +1,6 @@
 ---
-
+import { Image } from "astro:assets";
+import InspiraTECLogoImage from "../../public/inspiratec-logo.png";
 ---
 
 <section id="cta">
@@ -4471,11 +4472,10 @@
           <div
             class="mx-auto rounded-2xl border bg-white/10 shadow-2xl backdrop-blur-md border-neutral-900 w-auto flex items-center justify-center"
           >
-            <img
-              itemprop="image"
-              class="w-auto h-40"
-              src="/inspiratec-logo.png"
-              alt="logo"
+            <Image
+              src={InspiraTECLogoImage}
+              class="w-auto h-40 object-cover"
+              alt="Hackathon PachaqTech 2024"
             />
           </div>
           <div
