@@ -1,0 +1,32 @@
+---
+import { cn } from "../utils/cn";
+
+interface Props {
+  img: string;
+  name: string;
+  body: string;
+}
+
+const { body, img, name } = Astro.props;
+---
+
+<figure
+  class={cn(
+    "relative w-64 cursor-pointer overflow-hidden rounded-2xl border p-4 transition-colors",
+    "bg-neutral-950 border-neutral-900 hover:bg-neutral-900"
+  )}
+>
+  <div class="flex flex-col gap-2">
+    <div class="aspect-square">
+      <img class="rounded-2xl mx-auto w-full h-full" alt={name} src={img} />
+    </div>
+
+    <div class="flex flex-col">
+      <figcaption class="text-2xl font-medium">
+        {name}
+      </figcaption>
+    </div>
+  </div>
+
+  <blockquote class="mt-2 text-lg">{body}</blockquote>
+</figure>

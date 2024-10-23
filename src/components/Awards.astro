@@ -1,0 +1,91 @@
+---
+import { NeonGradientCard } from "./NeonGradientCard";
+---
+
+<section id="awards">
+  <div class="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
+    <div class="mx-auto max-w-5xl text-center">
+      <h2 class="text-5xl font-bold tracking-tight text-white sm:text-6xl">
+        &lt;Premios/&gt;
+      </h2><p class="mt-6 text-xl leading-8 text-white/80">
+        Reconocemos el <strong>esfuerzo</strong> y <strong>dedicación</strong> de
+        los equipos ganadores con incentivos que <strong>impulsarán</strong> su <strong
+          >desarrollo profesional</strong
+        >.
+      </p>
+    </div>
+
+    <div
+      class="mx-auto grid w-full justify-center md:grid-cols-3 flex-col gap-4"
+    >
+      <div
+        class="mt-0 md:mt-6 relative flex max-w-[400px] flex-col gap-8 rounded-2xl border p-4 text-white overflow-hidden border-neutral-900 bg-neutral-950 hover:bg-neutral-900 transition-colors"
+      >
+        <div class="flex items-center">
+          <div class="ml-4">
+            <h2 class="text-lg font-semibold leading-7 text-neutral-100">
+              🥈 Segundo Puesto
+            </h2>
+          </div>
+        </div><div class="flex flex-row gap-1 items-center justify-center">
+          <span class="text-4xl font-bold text-white">S/ 3000</span>
+        </div>
+        <hr
+          class="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0"
+        />
+        <p class="h-12 text-sm leading-5 text-neutral-200">
+          Pack de licencias de Nova Academy para cada integrante.
+        </p>
+      </div>
+
+      <NeonGradientCard
+        client:visible
+        className="relative max-w-[400px] order-first md:order-none"
+      >
+        <div
+          class="order-first z-10 h-full md:order-none relative flex max-w-[400px] flex-col gap-8 text-black"
+        >
+          <h2
+            class="text-2xl font-semibold leading-7 text-center text-neutral-100"
+          >
+            🥇 Primer Puesto
+          </h2>
+
+          <div class="flex flex-row gap-1 items-center justify-center">
+            <span class="text-4xl lg:text-6xl font-bold text-white"
+              >S/ 5000</span
+            >
+          </div>
+          <hr
+            class="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0"
+          />
+
+          <p class="h-12 text-sm leading-5 text-neutral-200">
+            Pack de licencias de Nova Academy para cada integrante.
+          </p>
+        </div>
+      </NeonGradientCard>
+
+      <div
+        class="mt-0 md:mt-6 relative flex max-w-[400px] flex-col gap-8 rounded-2xl border p-4 text-white overflow-hidden border-neutral-900 bg-neutral-950 hover:bg-neutral-900 transition-colors"
+      >
+        <h2
+          class="text-lg font-semibold leading-7 text-left md:text-right text-neutral-100"
+        >
+          🥉 Tercer Puesto
+        </h2>
+
+        <div class="flex flex-row gap-1 items-center justify-center">
+          <span class="text-4xl font-bold text-white">S/ 1000</span>
+        </div>
+        <hr
+          class="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0"
+        />
+
+        <p class="h-12 text-sm leading-5 text-neutral-200">
+          Pack de licencias de Nova Academy para cada integrante.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

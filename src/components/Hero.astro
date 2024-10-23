@@ -1,0 +1,59 @@
+---
+import { RetroGrid } from "./RetroGrid";
+---
+
+<section id="hero" class="relative flex flex-col w-full overflow-hidden">
+  <div
+    class="absolute inset-2 bottom-0 overflow-hidden rounded-2xl ring-1 ring-inset ring-black/5 bg-[linear-gradient(115deg,var(--tw-gradient-stops))] from-[#5100e8] from-[28%] via-[#297ab5] via-[70%] to-[#00f482] sm:bg-[linear-gradient(145deg,var(--tw-gradient-stops))]"
+  >
+    <RetroGrid client:visible className="from-black" />
+  </div>
+
+  <div class="relative px-6 lg:px-8 z-10">
+    <div class="mx-auto max-w-2xl lg:max-w-6xl">
+      <!-- class="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32" -->
+      <div class="py-16 sm:py-24 md:py-32 flex justify-between items-center">
+        <div>
+          <h1 class="sr-only">Hackathon PachaqTech 2024.</h1>
+
+          <img
+            itemprop="image"
+            class="w-auto h-full -mx-5 md:-mx-8 lg:-mx-16"
+            src="/inspiratec-logo.png"
+            alt="Hackathon PachaqTech 2024"
+          />
+
+          <p
+            class="mt-8 max-w-lg text-xl/7 font-medium text-neutral-100 sm:text-2xl/8"
+          >
+            Desde el 22 hasta el 23 de Noviembre_
+          </p><div class="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+            <a
+              href="https://forms.gle/DPtv8KwoNXraSnKq6"
+              target="_blank"
+              class="group uppercase ring-border-focus focus-visible:ring-offset-bg outline-none ring-0 focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-background disabled:bg-bg-disabled disabled:text-fg-disabled inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-lg font-medium leading-normal transition-colors disabled:cursor-default bg-black hover:bg-neutral-900 active:bg-neutral-900 h-14 px-6 [&_svg]:size-4 text-white"
+            >
+              ¡Regístrate Ahora!<svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right ml-1 size-8 transition-all duration-300 ease-out group-hover:translate-x-1"
+                ><path d="m9 18 6-6-6-6"></path></svg
+              >
+            </a>
+          </div>
+        </div>
+
+        <img
+          src="/hero-image.png"
+          alt="Hackathon PachaqTech 2024"
+          class="w-1/2 lg:h-full hidden md:flex"
+        />
+      </div>
+    </div>
+  </div>
+</section>

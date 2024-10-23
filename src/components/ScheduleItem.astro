@@ -1,0 +1,54 @@
+---
+interface Props {
+  index: number;
+  title: string;
+  description: string;
+}
+
+const { index, title, description } = Astro.props;
+---
+
+<div
+  class="relative max-w-[400px] overflow-hidden rounded-2xl border-2 border-brand2 p-[1px] backdrop-blur-3xl"
+>
+  <span
+    class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#5100e8_0%,#00f482_50%,#5100e8_100%)]"
+  ></span>
+
+  <div
+    class="h-full w-full rounded-2xl bg-neutral-950 hover:bg-neutral-900 px-4 py-4 backdrop-blur-3xl transition-colors"
+  >
+    <div class="absolute -top-1 -right-1 bg-brand2 p-2 rounded-bl-2xl">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8 text-black transform rotate-12"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path
+          d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+        ></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path
+          d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path
+          d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
+          d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path
+          d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path
+          d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"
+        ></circle><circle cx="18" cy="3" r=".5"></circle><circle
+          cx="20"
+          cy="21"
+          r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg
+      >
+    </div>
+
+    <h3 class="text-brand2 font-bold text-md uppercase max-w-60">
+      {index}. {title}
+    </h3>
+
+    <p class="text-2xl mt-4 leading-8 tracking-wide font-medium">
+      {description}
+    </p>
+  </div>
+</div>
