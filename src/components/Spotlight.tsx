@@ -41,7 +41,7 @@ const CardSpotlight: React.FC<React.PropsWithChildren> = ({ children }) => {
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative overflow-hidden mx-auto cursor-default h-52 w-full max-w-[400px] break-words rounded-2xl bg-brand2 border border-brand2/50"
+      className="relative overflow-hidden mx-auto cursor-default h-40 w-full max-w-[400px] break-words rounded-2xl bg-brand2 border border-brand2/50"
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 rounded-2xl"

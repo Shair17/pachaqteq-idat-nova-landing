@@ -1,6 +1,7 @@
 ---
 import { RetroGrid } from "./RetroGrid";
 import { Accordion } from "./Accordion";
+import { TypingAnimation } from "./TypingAnimation";
 
 const evaluationCriteria = [
   {
@@ -32,10 +33,13 @@ const evaluationCriteria = [
 >
   <div class="z-10 mx-auto flex max-w-6xl flex-col gap-8 px-4 py-14 md:px-8">
     <div class="mx-auto max-w-5xl text-center">
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-black">
-        &lt;Jurado y Evaluación/&gt;
-      </h2>
-      <p class="mt-6 text-lg leading-8 text-black/80">
+      <TypingAnimation
+        client:visible
+        className="text-3xl font-bold tracking-tight text-white md:text-5xl"
+        text="<Jurado y Evaluación/>"
+      />
+
+      <p class="mt-6 text-base text-black/80">
         Conoce cómo se seleccionarán los ganadores de la <strong
           >Hackathon PachaqTech 2024</strong
         > y cuáles serán los criterios de evaluación.

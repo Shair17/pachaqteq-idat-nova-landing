@@ -1,15 +1,18 @@
 ---
 import { NeonGradientCard } from "./NeonGradientCard";
+import { TypingAnimation } from "./TypingAnimation";
 ---
 
 <section id="awards">
   <div class="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
     <div class="mx-auto max-w-5xl text-center">
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">
-        &lt;Premios/&gt;
-      </h2>
+      <TypingAnimation
+        client:visible
+        className="text-3xl font-bold tracking-tight text-white md:text-5xl"
+        text="<Premios/>"
+      />
 
-      <p class="mt-6 text-xl leading-8 text-white/80">
+      <p class="mt-6 text-base text-white/80">
         Reconocemos el <strong>esfuerzo</strong> y <strong>dedicación</strong> de
         los equipos ganadores con incentivos que <strong>impulsarán</strong> su <strong
           >desarrollo profesional</strong
@@ -30,14 +33,19 @@ import { NeonGradientCard } from "./NeonGradientCard";
             </h2>
           </div>
         </div><div class="flex flex-row gap-1 items-center justify-center">
-          <span class="text-4xl font-bold text-white">S/ 3000</span>
+          <span class="text-4xl font-bold text-white">S/ 2500</span>
         </div>
         <hr
           class="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0"
         />
-        <p class="h-12 text-sm leading-5 text-neutral-200">
-          Pack de licencias de Nova Academy para cada integrante.
-        </p>
+        <ul class="list-disc pl-4">
+          <li class="h-12 text-sm leading-5 text-neutral-200">
+            Pack de Volt Gamer para cada participante.
+          </li>
+          <li class="h-12 text-sm leading-5 text-neutral-200">
+            Pack de licencias de Nova Academy para cada integrante.
+          </li>
+        </ul>
       </div>
 
       <NeonGradientCard
@@ -45,7 +53,7 @@ import { NeonGradientCard } from "./NeonGradientCard";
         className="relative max-w-[400px] order-first md:order-none"
       >
         <div
-          class="order-first z-10 h-full md:order-none relative flex max-w-[400px] flex-col gap-8 text-black"
+          class="order-first z-10 h-full md:order-none relative flex max-w-[400px] flex-col gap-8"
         >
           <h2
             class="text-2xl font-semibold leading-7 text-center text-neutral-100"
@@ -62,9 +70,14 @@ import { NeonGradientCard } from "./NeonGradientCard";
             class="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0"
           />
 
-          <p class="h-12 text-sm leading-5 text-neutral-200">
-            Pack de licencias de Nova Academy para cada integrante.
-          </p>
+          <ul class="list-disc pl-4">
+            <li class="h-12 text-sm leading-5 text-neutral-200">
+              Monitores LG Gamer para cada participante.
+            </li>
+            <li class="h-12 text-sm leading-5 text-neutral-200">
+              Pack de licencias de Nova Academy para cada integrante.
+            </li>
+          </ul>
         </div>
       </NeonGradientCard>
 
@@ -84,9 +97,15 @@ import { NeonGradientCard } from "./NeonGradientCard";
           class="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0"
         />
 
-        <p class="h-12 text-sm leading-5 text-neutral-200">
-          Pack de licencias de Nova Academy para cada integrante.
-        </p>
+        <ul class="list-disc pl-4">
+          <li class="h-12 text-sm leading-5 text-neutral-200">
+            Licencia semestral de cursos asincrónicos de InLearning para cada
+            participante.
+          </li>
+          <li class="h-12 text-sm leading-5 text-neutral-200">
+            Pack de licencias de Nova Academy para cada integrante.
+          </li>
+        </ul>
       </div>
     </div>
   </div>

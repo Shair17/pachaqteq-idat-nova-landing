@@ -1,22 +1,20 @@
 ---
-import { SparklesText } from "./SparklesText";
 import Spotlight from "./Spotlight";
+import { TypingAnimation } from "./TypingAnimation";
 ---
 
 <section id="about">
   <div class="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
-    <div class="max-w-5xl">
+    <div class="mx-auto max-w-5xl text-center">
       <div>
-        <h2 class="text-4xl font-bold tracking-tight text-white md:text-5xl">
-          &lt;Sobre <SparklesText
-            text="InspiraTEC/>"
-            client:visible
-            className="text-4xl md:text-5xl"
-          />
-        </h2>
+        <TypingAnimation
+          client:visible
+          className="text-3xl font-bold tracking-tight text-white md:text-5xl"
+          text="<Sobre InspiraTEC/>"
+        />
       </div>
 
-      <p class="mt-4 text-xl text-white/80">
+      <p class="mt-4 text-base text-white/80">
         Únete a la <strong>Hackathon IA</strong> para la sostenibilidad y genera
         impacto positivo.
       </p>
@@ -57,7 +55,7 @@ import Spotlight from "./Spotlight";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="h-56 w-56"
+            class="h-52 w-52"
             ><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect
               x="2"
               y="16"
@@ -71,7 +69,7 @@ import Spotlight from "./Spotlight";
 
         <div class="relative p-4 z-10">
           <h3
-            class="font-bold text-xl md:text-2xl lg:text-3xl leading-8 tracking-widest text-black"
+            class="font-bold text-lg md:text-xl lg:text-2xl tracking-widest text-black"
           >
             &lt;SOSTENIBILIDAD&gt;
           </h3>
@@ -84,14 +82,13 @@ import Spotlight from "./Spotlight";
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-56 w-56"
+            class="h-52 w-52"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-brain-circuit"
             ><path
               d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
             ></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path
@@ -111,7 +108,7 @@ import Spotlight from "./Spotlight";
 
         <div class="relative p-4 z-10">
           <h3
-            class="font-bold text-xl md:text-2xl lg:text-3xl leading-8 tracking-widest text-black"
+            class="font-bold text-lg md:text-xl lg:text-2xl tracking-widest text-black"
           >
             &lt;INTELIGENCIA ARTIFICIAL&gt;
           </h3>
@@ -124,14 +121,13 @@ import Spotlight from "./Spotlight";
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-56 w-56"
+            class="h-52 w-52"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-brain"
             ><path
               d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
             ></path><path
@@ -148,7 +144,7 @@ import Spotlight from "./Spotlight";
 
         <div class="relative p-4 z-10">
           <h3
-            class="font-bold text-xl md:text-2xl lg:text-3xl leading-8 tracking-widest text-black"
+            class="font-bold text-lg md:text-xl lg:text-2xl tracking-widest text-black"
           >
             &lt;CREATIVIDAD&gt;
           </h3>

@@ -1,8 +1,35 @@
 ---
 import { Image } from "astro:assets";
 import HeroImage from "../../public/hero-image.png";
-import InspiraTECLogoImage from "../../public/inspiratec-logo.png";
 import { RetroGrid } from "./RetroGrid";
+
+const NAV_ITEMS = [
+  {
+    label: "Sobre InspiraTEC",
+    href: "#about",
+  },
+  {
+    label: "¿Por qué participar?",
+    href: "#why",
+  },
+  {
+    label: "Etapas",
+
+    href: "#schedule",
+  },
+  {
+    label: "Proceso de evaluación",
+    href: "#evaluation-process",
+  },
+  {
+    label: "Mentores",
+    href: "#mentors",
+  },
+  {
+    label: "Premios",
+    href: "#awards",
+  },
+];
 ---
 
 <section id="hero" class="relative flex flex-col w-full overflow-hidden">
@@ -14,43 +41,150 @@ import { RetroGrid } from "./RetroGrid";
 
   <div class="relative px-6 lg:px-8 z-10">
     <div class="mx-auto max-w-2xl lg:max-w-6xl">
+      <nav class="list-none hidden lg:flex lg:gap-6 pt-12">
+        {
+          NAV_ITEMS.map((navbarItem) => (
+            <li class="">
+              <a
+                href={navbarItem.href}
+                class="text-neutral-200 hover:text-white transition-colors text-sm"
+              >
+                {navbarItem.label}
+              </a>
+            </li>
+          ))
+        }
+      </nav>
+
       <div class="py-16 sm:py-24 md:py-32 flex justify-between items-center">
         <div>
-          <div class="aspect-auto">
-            <!-- <Image
-              src={InspiraTECLogoImage}
-              class="w-auto h-1/2 -mx-5 md:-mx-8 lg:-mx-16 object-cover"
-              alt="Hackathon PachaqTech 2024"
-            /> -->
-            <Image
-              src={InspiraTECLogoImage}
-              class="w-full h-full -mx-5 md:-mx-8 lg:-mx-16 object-cover"
-              alt="Hackathon PachaqTech 2024"
-            />
-          </div>
-
-          <p
-            class="mt-8 max-w-lg text-lg/7 font-medium text-neutral-100 sm:text-2xl/8"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1016 333"
+            fill="none"
+            class="h-auto w-auto"
+            ><g clip-path="url(#a)"
+              ><path
+                fill="#00F483"
+                stroke="#00F483"
+                stroke-miterlimit="10"
+                stroke-width=".75"
+                d="M685.06 147.45h-24.38v80.31H640.6v-80.31h-24.38v-20.08h68.84v20.08ZM728.08 147.45v17.64h43.03v20.08h-43.03v22.52h48.76v20.08H708V127.38h68.84v20.08h-48.76v-.01ZM848.55 156.05c0-4.88-3.73-8.6-8.61-8.6h-11.47c-4.88 0-8.61 3.87-8.61 8.6v42.88c0 4.73 3.87 8.6 8.61 8.6h11.47c4.73 0 8.61-3.87 8.61-8.6v-7.89h20.08v7.89c0 15.92-12.91 28.83-28.68 28.83h-11.47c-15.78 0-28.68-13.05-28.68-28.83v-42.88c0-15.78 12.91-28.68 28.68-28.68h11.47c15.92 0 28.68 12.76 28.68 28.68v7.89h-20.08v-7.89Z"
+              ></path><mask
+                id="b"
+                width="384"
+                height="394"
+                x="697"
+                y="-30"
+                maskUnits="userSpaceOnUse"
+                style="mask-type:luminance"
+                ><path
+                  fill="#fff"
+                  d="M697.22 90.28h124.92l69.28 14.7 36.74 68.08-24.92 59.31-56.32 24.83-123.21 41.99 41.75 64.03 212.05-31.49s102.87-107.07 102.87-110.22c0-3.15-7.35-205.75-7.35-205.75L928.17-29.38 765.46-8.39l-68.23 98.67h-.01Z"
+                ></path></mask
+              ><g mask="url(#b)"
+                ><path
+                  fill="#fff"
+                  d="M850.05 272.99c55.1-1.55 98.67-47.65 97.11-102.75-1.55-55.1-47.65-98.67-102.75-97.11-55.1 1.55-98.67 47.65-97.11 102.75 1.55 55.1 47.65 98.67 102.75 97.11Zm-5.56-197.41c53.75-1.52 98.71 40.98 100.23 94.73 1.52 53.75-40.98 98.71-94.73 100.23-53.75 1.52-98.71-40.98-100.23-94.73-1.52-53.75 40.98-98.71 94.73-100.23Z"
+                ></path><path
+                  fill="#5300E8"
+                  d="M850.39 294.4c68.02-1.92 121.61-58.61 119.69-126.63-1.92-68.02-58.61-121.61-126.63-119.69-68.02 1.92-121.61 58.61-119.69 126.63 1.92 68.02 58.61 121.61 126.63 119.69Zm-6.56-232.79c60.45-1.7 111.01 46.09 112.72 106.54 1.7 60.45-46.09 111.01-106.54 112.72-60.45 1.7-111.01-46.09-112.72-106.54-1.7-60.45 46.09-111.01 106.54-112.72Z"
+                ></path><path
+                  fill="#00F483"
+                  stroke="#00F483"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  d="m881.03 318.52-.64-2.78c66.78-15.35 115.98-75.87 114.73-146.79l8.33-.23c-.01-.77-.01-1.55-.04-2.32-2.41-85.35-73.55-152.59-158.9-150.19-10.52.3-20.76 1.64-30.63 3.92l1.59 6.87c-66.14 14.49-115.4 73.19-116.22 142.71l-7.79.22c.01.77.01 1.55.04 2.32 2.41 85.35 73.55 152.59 158.9 150.19 10.52-.3 20.76-1.64 30.63-3.92ZM816.29 30.55l1.42 6.16c8.8-2.04 17.92-3.24 27.28-3.51 75.85-2.14 139.3 57.83 141.44 133.68.02.78.03 1.55.04 2.32l5.03-.14c1.2 69.15-46.79 128.17-111.92 143.14l-2.37-10.25c-8.8 2.04-17.92 3.24-27.29 3.51-75.85 2.14-139.3-57.83-141.44-133.68-.02-.78-.03-1.55-.04-2.32l-5.57.16c.87-67.76 48.92-124.96 113.41-139.07h.01Z"
+                ></path></g
+              ><path
+                fill="#fff"
+                d="M10.72 230.28V124.95H25v105.33H10.72ZM120.01 230.28l-56.36-89.71c.1 2.44.22 4.86.37 7.25.1 2.04.19 4.2.26 6.47.07 2.27.11 4.27.11 6.02v69.97H51.68V124.95h16.6l56.96 90.3-.45-7.33c-.1-2.09-.2-4.37-.3-6.84-.1-2.47-.15-4.82-.15-7.06v-69.07h12.86v105.33h-17.19ZM244.78 201.2c0 4.44-.86 8.52-2.58 12.26-1.72 3.74-4.37 6.97-7.96 9.68-3.59 2.72-8.11 4.83-13.57 6.35-5.46 1.52-11.92 2.28-19.4 2.28-13.11 0-23.32-2.29-30.65-6.88-7.33-4.58-11.99-11.21-13.98-19.89l13.83-2.77c.7 2.74 1.77 5.23 3.21 7.48 1.44 2.24 3.4 4.17 5.87 5.79s5.52 2.88 9.16 3.77c3.64.9 8 1.35 13.08 1.35 4.24 0 8.12-.36 11.66-1.08 3.54-.72 6.58-1.83 9.12-3.33 2.54-1.5 4.52-3.43 5.94-5.79 1.42-2.37 2.13-5.2 2.13-8.48 0-3.28-.78-6.23-2.35-8.37-1.57-2.14-3.78-3.91-6.62-5.31-2.84-1.39-6.23-2.57-10.17-3.51-3.94-.95-8.3-1.97-13.08-3.06-2.94-.65-5.89-1.36-8.86-2.13-2.97-.77-5.81-1.69-8.52-2.77a50.944 50.944 0 0 1-7.66-3.77c-2.39-1.44-4.46-3.18-6.2-5.2-1.75-2.02-3.12-4.36-4.11-7.03-1-2.67-1.5-5.74-1.5-9.23 0-4.98 1.01-9.26 3.03-12.82 2.02-3.56 4.82-6.49 8.41-8.78 3.59-2.29 7.82-3.96 12.71-5.01 4.88-1.05 10.17-1.57 15.85-1.57 6.53 0 12.11.51 16.75 1.53 4.63 1.02 8.55 2.55 11.74 4.6 3.19 2.04 5.74 4.57 7.66 7.59 1.92 3.02 3.45 6.52 4.6 10.5l-14.05 2.47c-.7-2.54-1.71-4.81-3.03-6.8-1.32-1.99-3.05-3.66-5.2-5.01-2.14-1.35-4.75-2.37-7.81-3.06-3.06-.7-6.67-1.05-10.8-1.05-4.88 0-8.98.44-12.3 1.31-3.31.87-5.98 2.06-8 3.55-2.02 1.5-3.46 3.25-4.34 5.27-.87 2.02-1.31 4.2-1.31 6.54 0 3.14.79 5.72 2.35 7.74 1.57 2.02 3.7 3.7 6.39 5.05 2.69 1.35 5.81 2.47 9.34 3.36 3.54.9 7.3 1.79 11.29 2.69 3.24.75 6.47 1.51 9.68 2.28 3.21.77 6.29 1.69 9.23 2.77 2.94 1.07 5.69 2.33 8.26 3.78 2.57 1.45 4.8 3.21 6.69 5.31 1.89 2.09 3.38 4.56 4.45 7.4 1.07 2.84 1.61 6.18 1.61 10.02l.01-.02ZM345.84 156.65c0 4.59-.76 8.86-2.28 12.82-1.52 3.96-3.79 7.4-6.8 10.32-3.02 2.92-6.79 5.22-11.33 6.91-4.54 1.69-9.82 2.54-15.85 2.54h-30.95v41.04h-14.28V124.95h44.33c6.23 0 11.66.76 16.3 2.28 4.63 1.52 8.5 3.66 11.59 6.43 3.09 2.77 5.41 6.11 6.95 10.02 1.54 3.91 2.32 8.24 2.32 12.97Zm-14.35.15c0-6.68-2.04-11.75-6.13-15.21-4.09-3.46-10.22-5.2-18.39-5.2h-28.33v41.56h28.93c8.22 0 14.27-1.82 18.13-5.46 3.86-3.64 5.79-8.87 5.79-15.7v.01ZM368.05 230.28V124.95h14.28v105.33h-14.28ZM483.47 230.28l-27.36-43.73h-32.82v43.73h-14.28V124.95h49.56c5.98 0 11.27.69 15.89 2.06 4.61 1.37 8.48 3.35 11.62 5.94 3.14 2.59 5.53 5.76 7.18 9.49 1.65 3.73 2.47 7.95 2.47 12.63 0 3.34-.49 6.63-1.46 9.87-.97 3.24-2.5 6.2-4.6 8.9-2.09 2.69-4.76 5.01-8 6.95-3.24 1.94-7.13 3.31-11.66 4.11l29.9 45.38h-16.45.01Zm-2.1-75.05c0-3.19-.55-5.96-1.64-8.3a15.47 15.47 0 0 0-4.78-5.87c-2.09-1.57-4.63-2.74-7.62-3.51-2.99-.77-6.38-1.16-10.17-1.16H423.3v38.87h34.46c4.09 0 7.62-.51 10.61-1.53 2.99-1.02 5.44-2.43 7.36-4.22 1.92-1.79 3.34-3.91 4.26-6.35.92-2.44 1.38-5.08 1.38-7.92v-.01ZM594.25 230.28l-12.04-30.8h-47.99l-12.11 30.8h-14.8l42.98-105.33h16.22l42.31 105.33h-14.58.01Zm-29.82-76.7c-.8-1.99-1.56-4.01-2.28-6.05-.72-2.04-1.36-3.9-1.91-5.57-.55-1.67-1.01-3.06-1.38-4.19-.37-1.12-.59-1.81-.63-2.06-.1.25-.33.95-.67 2.09-.35 1.15-.81 2.57-1.38 4.26-.57 1.69-1.22 3.56-1.94 5.61a331.1 331.1 0 0 1-2.21 6.06l-13.46 34.61h39.4l-13.53-34.76h-.01Z"
+              ></path><path
+                fill="#00F483"
+                d="M28.01 295.24v3.46c0 4.39-3.51 7.9-7.9 7.9H8.26v-34.56h10.86c4.4 0 7.9 3.51 7.9 7.9v2.47c0 2.47-1.09 4.64-2.81 6.07a7.855 7.855 0 0 1 3.8 6.76Zm-16.79-20.25v12.34h7.9c2.77 0 4.94-2.17 4.94-4.94v-2.47c0-2.76-2.17-4.94-4.94-4.94h-7.9v.01Zm13.83 20.25c0-2.77-2.17-4.94-4.94-4.94h-8.89v13.33h8.89c2.77 0 4.94-2.17 4.94-4.94v-3.46.01ZM55.66 272.03v10.91l-8.39 11.01v12.64h-2.96v-12.64l-8.39-10.42v-11.5h2.96v10.42l6.86 8.54h.05l6.91-9.04v-9.92h2.96ZM102.56 274.99v28.64h8.39v2.96H91.2v-2.96h8.39v-28.64H91.2v-2.96h19.75v2.96h-8.39ZM138.6 279.93v18.71c0 4.35-3.56 7.95-7.9 7.95h-11.85v-34.56h11.85c4.35 0 7.9 3.51 7.9 7.9Zm-2.96 0c0-2.76-2.17-4.94-4.94-4.94h-8.89v28.59h8.89a4.95 4.95 0 0 0 4.94-4.94v-18.71ZM166.25 295.29v11.31h-2.96v-9.18h-13.83v9.18h-2.96v-11.31l8.1-23.26h3.55l8.1 23.26Zm-16.3-.84h12.89l-6.22-18.02h-.44l-6.22 18.02h-.01ZM193.89 274.99h-8.39v31.6h-2.96v-31.6h-8.39v-2.96h19.75v2.96h-.01ZM247.21 291.93v2.96h-15.8v-2.96h15.8ZM304.48 279.93v2.96c0 4.39-3.51 7.9-7.9 7.9h-8.89v15.8h-2.96v-34.56h11.85c4.39 0 7.9 3.51 7.9 7.9Zm-2.96 0c0-2.76-2.17-4.94-4.94-4.94h-8.89v12.84h8.89c2.77 0 4.94-2.17 4.94-4.94v-2.96ZM332.13 295.29v11.31h-2.96v-9.18h-13.83v9.18h-2.96v-11.31l8.1-23.26h3.56l8.1 23.26h-.01Zm-16.29-.84h12.89l-6.22-18.02h-.44l-6.22 18.02h-.01ZM356.82 279.93c0-2.76-2.17-4.94-4.94-4.94h-3.95c-2.77 0-4.94 2.17-4.94 4.94v18.71a4.95 4.95 0 0 0 4.94 4.94h3.95a4.95 4.95 0 0 0 4.94-4.94v-2.71h2.96v2.71c0 4.35-3.51 7.95-7.9 7.95h-3.95c-4.35 0-7.9-3.6-7.9-7.95v-18.71c0-4.39 3.56-7.9 7.9-7.9h3.95c4.39 0 7.9 3.51 7.9 7.9v2.72h-2.96v-2.72ZM387.43 272.03v34.56h-2.96v-16.54h-13.83v16.54h-2.96v-34.56h2.96v15.06h13.83v-15.06h2.96ZM415.07 295.29v11.31h-2.96v-9.18h-13.83v9.18h-2.96v-11.31l8.1-23.26h3.55l8.1 23.26Zm-16.29-.84h12.89l-6.22-18.02h-.44l-6.22 18.02h-.01ZM439.21 305.26l3.51 5.73-2.62 1.43-3.7-5.97c-.49.1-1.04.15-1.58.15h-3.95c-4.35 0-7.9-3.6-7.9-7.95v-18.71c0-4.39 3.56-7.9 7.9-7.9h3.95c4.39 0 7.9 3.51 7.9 7.9v18.71c0 2.77-1.38 5.19-3.51 6.62v-.01Zm.55-25.33c0-2.76-2.17-4.94-4.94-4.94h-3.95c-2.77 0-4.94 2.17-4.94 4.94v18.71a4.95 4.95 0 0 0 4.94 4.94h3.95a4.95 4.95 0 0 0 4.94-4.94v-18.71ZM470.37 274.99h-8.39v31.6h-2.96v-31.6h-8.39v-2.96h19.75v2.96h-.01ZM481.23 274.99v11.75h14.81v2.96h-14.81v13.92h16.79v2.96h-19.75v-34.56h19.75v2.96h-16.79v.01ZM522.7 279.93c0-2.76-2.17-4.94-4.94-4.94h-3.95c-2.77 0-4.94 2.17-4.94 4.94v18.71a4.95 4.95 0 0 0 4.94 4.94h3.95a4.95 4.95 0 0 0 4.94-4.94v-2.71h2.96v2.71c0 4.35-3.5 7.95-7.9 7.95h-3.95c-4.35 0-7.9-3.6-7.9-7.95v-18.71c0-4.39 3.55-7.9 7.9-7.9h3.95c4.4 0 7.9 3.51 7.9 7.9v2.72h-2.96v-2.72Z"
+              ></path></g
+            ><defs
+              ><clipPath id="a"
+                ><path fill="#fff" d="M0 0h1015.15v332.94H0z"></path></clipPath
+              ></defs
+            ></svg
           >
-            Desde el 22 hasta el 23 de Noviembre
-          </p><div class="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <a
-              href="https://forms.gle/DPtv8KwoNXraSnKq6"
-              target="_blank"
-              class="group uppercase ring-border-focus focus-visible:ring-offset-bg outline-none ring-0 focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-background disabled:bg-bg-disabled disabled:text-fg-disabled inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-lg font-medium leading-normal transition-colors disabled:cursor-default bg-black hover:bg-neutral-900 active:bg-neutral-900 h-14 px-6 [&_svg]:size-4 text-white"
+
+          <div class="flex flex-col gap-4 mt-8">
+            <div
+              class="bg-brand2 rounded-2xl p-3 flex items-center gap-4 max-w-fit"
             >
-              ¡Regístrate Ahora!<svg
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-chevron-right ml-1 size-8 transition-all duration-300 ease-out group-hover:translate-x-1"
-                ><path d="m9 18 6-6-6-6"></path></svg
+                class="text-black size-8"
+                ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
+                  width="18"
+                  height="18"
+                  x="3"
+                  y="4"
+                  rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"
+                ></path><path d="M12 14h.01"></path><path d="M16 14h.01"
+                ></path><path d="M8 18h.01"></path><path d="M12 18h.01"
+                ></path><path d="M16 18h.01"></path></svg
               >
-            </a>
+
+              <p class="text-black text-base">
+                Del 24 de octubre al 10 de Noviembre
+              </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-2">
+              <div class="bg-brand2 rounded-2xl p-2 flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-black size-6"
+                  ><line x1="10" x2="14" y1="2" y2="2"></line><line
+                    x1="12"
+                    x2="15"
+                    y1="14"
+                    y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg
+                >
+
+                <p class="text-black text-sm">22 y 23 de Noviembre</p>
+              </div>
+
+              <div class="bg-brand2 rounded-2xl p-3 flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-black size-6"
+                  ><path
+                    d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"
+                  ></path><rect x="2" y="6" width="14" height="12" rx="2"
+                  ></rect></svg
+                >
+
+                <p class="text-black text-sm">Modalidad 100% virtual</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -61,5 +195,29 @@ import { RetroGrid } from "./RetroGrid";
         />
       </div>
     </div>
+  </div>
+</section>
+
+<section class="bg-brand1 m-2 rounded-2xl">
+  <div
+    class="mx-auto container px-5 py-8 flex flex-col md:flex-row gap-2 items-center justify-center"
+  >
+    <a
+      href="https://forms.gle/DPtv8KwoNXraSnKq6"
+      target="_blank"
+      class="group uppercase ring-border-focus focus-visible:ring-offset-bg outline-none ring-0 focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-background disabled:bg-bg-disabled disabled:text-fg-disabled inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-2xl font-medium leading-normal transition-colors disabled:cursor-default bg-black hover:bg-neutral-900 active:bg-neutral-900 h-14 px-6 [&_svg]:size-4 text-white"
+    >
+      ¡Regístrate Ahora!<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-chevron-right ml-1 size-8 transition-all duration-300 ease-out group-hover:translate-x-1"
+        ><path d="m9 18 6-6-6-6"></path></svg
+      >
+    </a>
   </div>
 </section>

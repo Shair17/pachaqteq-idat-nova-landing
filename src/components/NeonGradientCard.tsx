@@ -130,7 +130,7 @@ export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
     >
       <div
         className={cn(
-          "bg-neutral-900 hover:bg-neutral-800 transition-colors",
+          "bg-black/10 transition-colors",
           "relative size-full min-h-[inherit] rounded-[var(--card-content-radius)] p-4",
           "before:absolute before:-left-[var(--border-size)] before:-top-[var(--border-size)] before:-z-10 before:block",
           "before:h-[var(--pseudo-element-height)] before:w-[var(--pseudo-element-width)] before:rounded-[var(--border-radius)] before:content-['']",

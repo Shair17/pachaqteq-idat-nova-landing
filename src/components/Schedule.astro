@@ -1,10 +1,11 @@
 ---
 import ScheduleItem from "./ScheduleItem.astro";
+import { TypingAnimation } from "./TypingAnimation";
 
 const schedules = [
   {
     title: "<Inscripción>",
-    description: "Desde el 23 de octubre hasta el 10 de noviembre.",
+    description: "Desde el 24 de octubre hasta el 10 de noviembre.",
   },
   {
     title: "<PRE-SELECCIÓN DE 16 EQUIPOS>",
@@ -28,19 +29,20 @@ const schedules = [
 <section id="schedule">
   <div class="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
     <div class="mx-auto max-w-5xl text-center">
-      <h2 class="text-4xl font-bold tracking-tight text-white md:text-5xl">
-        &lt;Etapas/&gt;
-      </h2>
-      <p class="mt-6 text-xl leading-8 text-white/80">
+      <TypingAnimation
+        client:visible
+        className="text-3xl font-bold tracking-tight text-white md:text-5xl"
+        text="<Etapas/>"
+      />
+
+      <p class="mt-6 text-base text-white/80">
         El concurso se llevará a cabo de manera virtual, permitiendo la
         participación de personas de Lima y provincias. La premiación final se
         realizará de manera presencial en Lima el día 25 de noviembre de 2024.
       </p>
     </div>
 
-    <div
-      class="mx-auto grid w-full justify-center md:grid-cols-3 gap-4 place-content-center"
-    >
+    <div class="flex flex-wrap justify-center gap-4">
       {
         schedules.map((schedule, index) => (
           <ScheduleItem

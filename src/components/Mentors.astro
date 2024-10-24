@@ -1,6 +1,7 @@
 ---
 import { Marquee } from "./Marquee";
 import MentorItem from "./MentorItem.astro";
+import { TypingAnimation } from "./TypingAnimation";
 
 const mentors = [
   {
@@ -62,10 +63,13 @@ const secondRow = mentors.slice(mentors.length / 2);
 <section id="mentors">
   <div class="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 pt-7 md:px-8">
     <div class="mx-auto max-w-5xl text-center">
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white">
-        &lt;Mentores/&gt;
-      </h2>
-      <p class="mt-6 text-xl leading-8 text-white/80">
+      <TypingAnimation
+        client:visible
+        className="text-3xl font-bold tracking-tight text-white md:text-5xl"
+        text="<Mentores/>"
+      />
+
+      <p class="mt-6 text-base leading-8 text-white/80">
         Los equipos tendrán acceso a <strong>mentores expertos</strong> en sus áreas.
       </p>
     </div>
