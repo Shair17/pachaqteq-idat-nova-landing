@@ -1,109 +1,80 @@
 ---
-import { RetroGrid } from "./RetroGrid";
-import { Accordion } from "./Accordion";
+import { Marquee } from "./Marquee";
+import MentorItem from "./MentorItem.astro";
 import { TypingAnimation } from "./TypingAnimation";
 
-const evaluationCriteria = [
+const jury = [
   {
-    title: "Innovación y creatividad",
-    text: "¿El proyecto aporta ideas nuevas o soluciones innovadoras?",
-    active: false,
+    name: "Jack",
+    body: "Jurado 1",
+    img: "https://avatar.vercel.sh/jack",
   },
   {
-    title: "Uso efectivo de IA",
-    text: "¿Se utiliza inteligencia artificial de forma coherente y adecuada para resolver el problema planteado?",
-    active: false,
+    name: "Jill",
+    body: "Jurado 2",
+    img: "https://avatar.vercel.sh/jill",
   },
   {
-    title: "Impacto en la sostenibilidad",
-    text: "¿El proyecto contribuye de manera significativa a los objetivos de sostenibilidad?",
-    active: false,
+    name: "John",
+    body: "Jurado 3",
+    img: "https://avatar.vercel.sh/john",
   },
   {
-    title: "Calidad de la presentación",
-    text: "¿El equipo logra transmitir claramente su propuesta de valor y el impacto de su solución?",
-    active: false,
+    name: "Jane",
+    body: "Jurado 4",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  {
+    name: "Jenny",
+    body: "Jurado 5",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "Jenny",
+    body: "Jurado 5",
+    img: "https://avatar.vercel.sh/jenny",
   },
 ];
 ---
 
-<section
-  id="jury"
-  class="relative flex flex-col w-full overflow-hidden bg-brand2"
->
-  <div class="z-10 mx-auto flex max-w-6xl flex-col gap-8 px-4 py-14 md:px-8">
+<section id="jury">
+  <div class="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 pt-7 md:px-8">
     <div class="mx-auto max-w-5xl text-center">
       <TypingAnimation
         client:visible
         className="text-3xl font-bold tracking-tight text-white md:text-5xl"
-        text="<Jurado y Evaluación/>"
+        text="<Jurados/>"
       />
 
-      <p class="mt-6 text-base text-black/80">
-        Conoce cómo se seleccionarán los ganadores de la <strong
-          >Hackathon PachaqTech 2024</strong
-        > y cuáles serán los criterios de evaluación.
+      <p class="mt-6 text-base leading-8 text-white/80">
+        Los equipos finalistas serán evaluados por <strong
+          >jurados expertos</strong
+        > en Tecnología y Sostenibilidad.
       </p>
-    </div>
-
-    <div class="mx-auto flex w-full justify-center flex-col gap-4">
-      <div class="space-y-2">
-        <h3 class="text-lg font-bold text-black sm:text-3xl">
-          Jurado Evaluador
-        </h3>
-        <p class="text-black/80">
-          El proceso de evaluación estará a cargo de
-          <strong>cuatro especialistas reconocidos del mercado peruano</strong>,
-          con amplia experiencia en tecnología, innovación y desarrollo
-          sostenible. Estos expertos analizarán cada proyecto desde una
-          perspectiva estratégica y técnica para garantizar la transparencia y
-          calidad en los resultados.
-        </p>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-lg font-bold text-black sm:text-3xl">
-          Criterios de Evaluación
-        </h3>
-
-        <div class="bg-black/5 rounded-2xl p-4">
-          {
-            evaluationCriteria.map((ec, index) => (
-              <Accordion
-                client:visible
-                title={ec.title}
-                id={`ec-${index}`}
-                active={ec.active}
-              >
-                {ec.text}
-              </Accordion>
-            ))
-          }
-        </div>
-      </div>
-
-      <div class="space-y-2">
-        <h3 class="text-lg font-bold text-black sm:text-3xl">
-          Proceso de Evaluación Final
-        </h3>
-
-        <p class="text-black/80">
-          Al finalizar el evento, los <strong>5 mejores equipos</strong> serán seleccionados
-          para presentar sus proyectos ante el jurado evaluador. Cada equipo dispondrá
-          de <strong>10 minutos</strong> para realizar su presentación, donde deberán
-          explicar su solución, la metodología empleada y el impacto potencial.
-        </p>
-        <p class="text-black/80">
-          Tras las presentaciones, el jurado deliberará y definirá los equipos
-          ganadores. Los tres primeros lugares serán anunciados en la ceremonia
-          de premiación presencial que se llevará a cabo el
-          <strong>25 de noviembre de 2024</strong>. Los premios serán otorgados
-          al <strong>1er, 2do y 3er puesto</strong>, destacando el trabajo de
-          cada equipo.
-        </p>
-      </div>
     </div>
   </div>
 
-  <RetroGrid className="from-brand1" client:visible />
+  <div
+    class="relative flex w-full flex-col items-center justify-center overflow-hidden pt-7 py-14"
+  >
+    <Marquee client:visible pauseOnHover className="[--duration:20s]">
+      {
+        jury.map((juryItem) => (
+          <MentorItem
+            img={juryItem.img}
+            name={juryItem.name}
+            body={juryItem.body}
+          />
+        ))
+      }
+    </Marquee>
+    <div
+      class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black"
+    >
+    </div>
+  </div>
 </section>

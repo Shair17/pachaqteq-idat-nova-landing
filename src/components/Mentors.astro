@@ -49,11 +49,6 @@ const mentors = [
     body: "Experto en Cosa 9",
     img: "https://avatar.vercel.sh/jenny",
   },
-  {
-    name: "James",
-    body: "Experto en Cosa 10",
-    img: "https://avatar.vercel.sh/james",
-  },
 ];
 
 const firstRow = mentors.slice(0, mentors.length / 2);
@@ -78,14 +73,14 @@ const secondRow = mentors.slice(mentors.length / 2);
   <div
     class="relative flex w-full flex-col items-center justify-center overflow-hidden pt-7 py-14"
   >
-    <Marquee client:visible pauseOnHover className="[--duration:20s]">
+    <Marquee reverse client:visible pauseOnHover className="[--duration:20s]">
       {
         firstRow.map((mentor) => (
           <MentorItem img={mentor.img} name={mentor.name} body={mentor.body} />
         ))
       }
     </Marquee>
-    <Marquee reverse pauseOnHover className="[--duration:20s]">
+    <Marquee pauseOnHover className="[--duration:20s]">
       {
         secondRow.map((mentor) => (
           <MentorItem img={mentor.img} name={mentor.name} body={mentor.body} />
