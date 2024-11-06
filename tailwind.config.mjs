@@ -9,6 +9,7 @@ export default {
       colors: {
         brand1: "#5100e8",
         brand2: "#00f482",
+        whatsapp: "#37c65c",
       },
       animation: {
         grid: "grid 15s linear infinite",
