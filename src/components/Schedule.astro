@@ -4,24 +4,20 @@ import { TypingAnimation } from "./TypingAnimation";
 
 const schedules = [
   {
-    title: "<Inscripción>",
-    description: "Desde el 28 de octubre hasta el 18 de noviembre.",
-  },
-  {
-    title: "<PRE-SELECCIÓN DE 16 EQUIPOS>",
-    description: "Desde el 19 al 22 de noviembre.",
+    title: "<INSCRIPCIÓN Y PRE-SELECCIÓN>",
+    description: "Desde el 28 de octubre hasta el 17 de noviembre.",
   },
   {
     title: "<INAUGURACIÓN Y CAPACITACIÓN>",
-    description: "Desde el 25 al 29 de noviembre.",
+    description: "Desde el 18 al 21 de noviembre.",
   },
   {
     title: "<DESARROLLO DEL PROYECTO (HACKATHON)>",
-    description: "Desde el 29 al 30 de noviembre.",
+    description: "Desde el 22 al 23 de noviembre.",
   },
   {
     title: "<EVALUACIÓN FINAL Y PREMIACIÓN>",
-    description: "2 de diciembre.",
+    description: "25 de noviembre.",
   },
 ];
 ---
@@ -42,7 +38,7 @@ const schedules = [
       </p>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="grid md:grid-cols-2 gap-4">
       {
         schedules.map((schedule, index) => (
           <ScheduleItem
